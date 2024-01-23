@@ -4,11 +4,14 @@
     font-family: sans-serif ;
     box-sizing: border-box;
 }
+
 :root{
     --background-color : #fff;
     --text-color : #555;
     --title-color : #000;
+    --theme-color: #ff7635;
 }
+
 
 .dark-theme{
     --background-color : #000;
@@ -37,9 +40,21 @@ nav{
 }
 
 .logo{
-    width: 350px;
+    text-decoration: none;
 }
 
+.rana{
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: var(--title-color);
+    width: 400px;
+}
+
+.rana span{
+    color: var(--theme-color);
+    font-family: 'League Spartan', sans-serif;
+}
 nav ul{
     list-style: none;
     width: 100%;
@@ -58,7 +73,7 @@ nav ul li a {
     font-weight: 500;
 }
 .toggle-btn{
-    background: #ff7635;
+    background:var(--theme-color);
     color : #fff;
     display : flex;
     align-items: center;
@@ -75,28 +90,50 @@ nav ul li a {
     margin-right: 10px;
 }
 
+.colorPicker{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 50px;
+    height:33px;
+    margin-left: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.colorPicker::-webkit-color-swatch{
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+}
+
 main{
     margin-top: 10%;
-    max-width: 65%;
+    max-width: 60%;
     padding-right: 2%;
 
 }
 
 main h1,h2{
     font-size: 70px;
-    font-family: sans-serif;
+    font-family: 'League Spartan', sans-serif;;
     color: var(--title-color);
     font-weight: 600;
 }
 
 main h2 span{
     font-style: italic;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-weight: 400;
+    font-family:'League Spartan', sans-serif;
+    font-weight: 300;
+}
+
+main p{
+    font-family:'League Spartan', sans-serif;
+    font-size: large;
 }
 
 .hire{
-    background: #ff7635;
+    background: var(--theme-color);
     color : #fff;
     display : inline-block;
     padding: 15px 70px;
@@ -106,8 +143,8 @@ main h2 span{
     margin-top: 30px;
 }
 
-.first img{
-    width: 500px;
+.first .svg1{
+    width: 600px;
     display: block;
 }
 
@@ -117,143 +154,81 @@ main h2 span{
 }
 
 .second{
-    margin-top: 200px;    
+    margin-top: 200px; 
+    height : 700px;   
     padding: 0 8%;
     display: flex;
+    background-color: var(--theme-color);
+    align-items: center;
 }
 
 .skill{ 
-    text-align: center;
-    align-self: center;  
-    padding: 2%;
-
-}
-
-.dot{
-    width: 700px;
-    display: block;
-}
-
-.ag-format-container {
-    width: 1142px;
-    margin: 0 auto;
-  }
-  .ag-courses_box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  
-    padding: 50px 0;
-  }
-  .ag-courses_item {
-    -ms-flex-preferred-size: calc(33.33333% - 30px);
-    flex-basis: calc(33.33333% - 30px);
-  
-    margin: 0 15px 30px;
-  
-    overflow: hidden;
-  
-    border-radius: 28px;
-  }
-  .ag-courses-item_link {
-    display: block;
-    padding: 30px 20px;
-    background-color: #121212;
-  
-    overflow: hidden;
-  
-    position: relative;
-  }
-  .ag-courses-item_link:hover,
-  .ag-courses-item_link:hover .ag-courses-item_date {
-    text-decoration: none;
-    color: #FFF;
-  }
-  .ag-courses-item_link:hover .ag-courses-item_bg {
-    -webkit-transform: scale(10);
-    -ms-transform: scale(10);
-    transform: scale(10);
-  }
-  .ag-courses-item_title {
-    min-height: 87px;
-    margin: 0 0 25px;
-  
-    overflow: hidden;
-  
-    font-weight: bold;
-    font-size: 30px;
-    color: #FFF;
-  
-    z-index: 2;
-    position: relative;
-  }
-  .ag-courses-item_date-box {
-    font-size: 18px;
-    color: #FFF;
-  
-    z-index: 2;
-    position: relative;
-  }
-  .ag-courses-item_date {
-    font-weight: bold;
-    color: #f9b234;
-  
-    -webkit-transition: color .5s ease;
-    -o-transition: color .5s ease;
-    transition: color .5s ease
-  }
-  .ag-courses-item_bg {
-    height: 128px;
-    width: 128px;
-    background-color: #f9b234;
-  
-    z-index: 1;
     position: absolute;
-    top: -75px;
-    right: -75px;
-  
-    border-radius: 50%;
-  
-    -webkit-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease; 
-  
-  @media only screen and (max-width: 979px) {
-    .ag-courses_item {
-      -ms-flex-preferred-size: calc(50% - 30px);
-      flex-basis: calc(50% - 30px);
-    }
-    .ag-courses-item_title {
-      font-size: 24px;
-    }
-  }
-  
-  @media only screen and (max-width: 767px) {
-    .ag-format-container {
-      width: 96%;
-    }
-  
-  }
-  @media only screen and (max-width: 639px) {
-    .ag-courses_item {
-      -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-    }
-    .ag-courses-item_title {
-      min-height: 72px;
-      line-height: 1;
-  
-      font-size: 24px;
-    }
-    .ag-courses-item_link {
-      padding: 22px 40px;
-    }
-    .ag-courses-item_date-box {
-      font-size: 16px;
-    }
-  }
+    width:40%;
+    align-self: center; 
+    text-align: center; 
+    padding: 2%;
+}
+
+.skill h2{
+    font-family: 'League Spartan', sans-serif;
+    color: var(--theme-color);
+    font-size: 100px;
+}
+
+.svg2{
+    width:50%;
+    height: 500px;
+}
+
+.container{
+    margin-top: 100px;
+}
+
+.svg345{
+    width: 60px;
+}
+.category{
+    display:flex;
+    margin-left:80px;   
+    text-align: center;
+    margin-top: 30px;
+}
+
+.category h2{
+    font-size: 40px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+    margin-left:30px;
+    color:var(--background-color);
+    margin-top: 8px;
+}
+
+.contact{
+  background-color: var(--theme-color);
+  margin-top: 100px;
+}
+
+.footer{
+  color: #fff;
+  background-color: #fff;
+  width : 80%;
+  border-top: 20px;
+  border-top: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px ;
+  margin: auto;
+}
+
+.filters button{
+    display: inline-block;
+    border: none;
+    background:var(--theme-color);
+    color : #fff;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width : 150px;
+    height : 40px;
+    border-radius : 20px;
+}
